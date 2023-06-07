@@ -7,42 +7,52 @@
     <title>Document</title>
 </head>
 <style>
-    @font-face {
-        font-family: 'GraphikKinopoisk';
-        font-weight: 400;
-        font-style: normal;
-        src: url('GraphikKinopoiskLC-Regular.ttf') format('truetype');
+    * {
+        margin: 0;
+        padding: 0;
     }
-    
-    .div1 {
-        align-items:center;
-        box-sizing:border-box;
-        color:rgba(255, 255, 255, 0.8);
-        display:flex;
-        flex-basis:auto;
-        flex-direction:row;
-        flex-grow:0;
-        flex-shrink:1;
-        flex-wrap:nowrap;
-        font-family: GraphikKinopoisk, Helvetica, Arial, sans-serif;
-        font-size:26px;
-        font-style:normal;
-        font-weight:400;
-        height:32px;
-        line-height:32px;
-        margin-right:16px;
-        text-size-adjust:100%;
-        user-select:none;
-        width:313.453px;
-        -webkit-box-align:center;
-        -webkit-box-direction:normal;
-        -webkit-box-flex:0;
-        -webkit-box-orient:horizontal;
-        -webkit-font-smoothing:antialiased;
-        -webkit-text-stroke-width:0px;
+
+    html {
+        box-sizing: border-box;
+        height: 100%;
+    }
+
+    body {
+        overflow: hidden;
+        width: 100vw;
+        height: 100vh;
+        font-size: 16px;
+        padding: 20px;
+
+        background-color: black;
+    }
+
+    .block {
+        width: 1000px;
+        height: 150px;
+        background-color: red;
+
+        animation-name: animation;
+        animation-timing-function: ease;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes animation {
+        0% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(79vh);
+        }
+
+        100% {
+            transform: translateY(0);
+        }
     }
 </style>
 <body>
-    <div class="div1">с 2020, драма, криминал</div>
+    <div class="block"></div>
 </body>
 </html>
