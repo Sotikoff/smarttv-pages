@@ -11,85 +11,31 @@
         margin: 0;
         padding: 0;
     }
-
     html {
         box-sizing: border-box;
         height: 100%;
     }
-
     body {
         overflow: hidden;
         width: 100vw;
         height: 100vh;
         display: flex;
-
         background-color: black;
     }
-
-    .transitionBlock {
-        width: 100%;
-        height: 200px;
-        background-color: red;
-
-        animation-name: transitionBlockAnimation;
-        animation-timing-function: ease;
-        animation-duration: 1000ms;
-        animation-iteration-count: infinite;
-    }
-
-    .opacityBlock {
-        width: 100%;
-        height: 100%;
-        background-color: greenyellow;
-
-        animation-name: opacityBlockAnimation;
-        animation-timing-function: linear;
-        animation-duration: 1000ms;
-        animation-iteration-count: infinite;
-    }
-
     .container {
-        box-sizing: border-box;
-        padding: 20px;
-        width: 860px;
-        height: 100%;
+        display: flex;
+        width: 100%;
+        height: 50%;
+        justify-content: space-around;
+        align-items: center;
     }
-
-    @keyframes transitionBlockAnimation {
-        0% {
-            transform: translateY(0);
-        }
-
-        50% {
-            transform: translateY(670px);
-        }
-
-        100% {
-            transform: translateY(0);
-        }
-    }
-
-    @keyframes opacityBlockAnimation {
-        0% {
-            opacity: 1;
-        }
-
-        50% {
-            opacity: 0;
-        }
-
-        100% {
-            opacity: 1;
-        }
-    }
-
 </style>
 <body>
     <div class="container">
-        <div class="transitionBlock"></div>
-    </div>
-    <div class="container">
-        <div class="opacityBlock"></div>
+        <div class="emoji">&#2764</div>
+        <div class="emoji">&#1f44d</div>
+        <div class="emoji">&#f611</div>
+        <div class="emoji">&#1f44e</div>
     </div>
 </body>
 </html>
